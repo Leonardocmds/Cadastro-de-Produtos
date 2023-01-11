@@ -1,0 +1,27 @@
+.formulario {
+    background-color: white;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    margin-top: 70px;
+    width: 50%;
+    margin-left: 25%;  
+  }
+
+.pesq{  
+    margin-top: 25px;
+    width: 50%;
+    margin-left: 25%;  
+  }
+
+.btt1{
+  margin-top: 5px;
+  margin-left: 40%;
+  
+}
+
+.btt2{
+  margin-top: 5px;
+  margin-left: 5px;
+  
+}
