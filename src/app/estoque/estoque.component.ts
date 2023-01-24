@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
-import { map, Observable, tap } from 'rxjs';
 import { Cadastro } from '../cadastro/cadastro';
 import { EstoqueService } from './estoque.service';
+
 
 @Component({
   selector: 'app-estoque',
@@ -13,30 +13,31 @@ import { EstoqueService } from './estoque.service';
 export class EstoqueComponent implements OnInit {
 
   cadastros : Cadastro[] = []
+  cadastro!: Cadastro;
   cadastroSelecionado: Cadastro[] = []
   displayedColumns = ['nome', 'preco', 'quantidade']
-  formP!: FormGroup;
 
-  valor2!: number;
-  valorTotal!: number;
-  
-  
   pesquisar!: string;
 
   constructor(private formBuilder: FormBuilder,
      private http:HttpClient,
-     private estoqueService: EstoqueService){}
+     private estoqueService: EstoqueService){
+
+     }
 
 
 
   ngOnInit(): void {
-    this.formP = this.formBuilder.group({
-      nome:['']
-
-     })
+   
+ 
   }
 
 
+  hehe(cadastro: Cadastro){
+    const valor = (<HTMLInputElement>document.getElementById("valorSoma")).value;
+    const xd = parseFloat(valor) * cadastro.preco;
+    return xd;
+  }
 
 
 
@@ -49,12 +50,13 @@ export class EstoqueComponent implements OnInit {
   mover(cadastro: Cadastro) {
     const c = cadastro;
     const jaAdicionado = this.cadastroSelecionado.filter(cad => cad.nome == c.nome)[0]
-   
     if(jaAdicionado){
       alert("JA adc")
     }else{
-
       this.cadastroSelecionado.push(cadastro)
+      const valor = (<HTMLInputElement>document.getElementById("valorSoma")).value;
+       const xd = parseFloat(valor) * c.preco;
+       console.log(xd);
     }
     
 

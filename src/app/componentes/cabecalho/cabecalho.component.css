@@ -2,7 +2,7 @@
     color: #000000;
     font-weight: bold;
     font-size: 20px;
-    margin-right: 432px;
+    margin-right: 415px;
 }
 
 
@@ -17,7 +17,7 @@
 }
 
 .item:hover{
-	color: #C78C19;
+	color: white;
 	text-decoration: underline;
   font-size: 20px;
 }

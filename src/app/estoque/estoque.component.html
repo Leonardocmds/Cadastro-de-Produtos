@@ -17,11 +17,9 @@
 
     <tbody>
       <tr *ngFor="let cadastro of cadastros" id="origem">
-        <td>{{ cadastro.nome }}</td>
-        <td>{{ cadastro.preco }}</td>
+        <td class="up">{{ cadastro.nome }}</td>
+        <td>R$ {{ cadastro.preco }}</td>
         <td>{{ cadastro.quantidade }}</td>
-        <td><button class="btn btn-primary">Alterar</button></td>
-        <td><button class="btn btn-primary">Deletar</button></td>
         <td><button class="btn btn-primary" (click)="mover(cadastro)">mover</button></td>
 
       </tr>
@@ -32,7 +30,7 @@
   <table class="table formulario">
     <thead>
       <tr>
-        <th scope="col">Quantidade</th>
+
         <th scope="col">Nome</th>
         <th scope="col">Preço</th>
         <th scope="col">Preço Total</th>
@@ -42,11 +40,11 @@
 
     <tbody>
       <tr *ngFor="let cadastro of cadastroSelecionado" id="origem">
-        <td><input type="number" [(ngModel)]="valor2"></td>
-        <td>{{ cadastro.nome }}</td>
-        <td>{{ cadastro.preco }}</td>
-        <td>{{ cadastro.preco * this.valor2}}</td>
-        <button></button>
+        <td><input id="valorSoma" type="number"></td>
+        <td class="up">{{ cadastro.nome }}</td>
+        <td>R$ {{ cadastro.preco }}</td>
+        <td>R$ {{ hehe(cadastro) }}</td>
+        <button ></button>
 
       </tr>
     </tbody>
