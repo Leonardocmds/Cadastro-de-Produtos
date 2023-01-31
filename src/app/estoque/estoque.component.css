@@ -1,31 +1,53 @@
 .formulario {
-    background-color: white;
-    padding: 16px;
-    border-radius: 4px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    margin-top: 70px;
-    width: 50%;
-    margin-left: 25%;  
-  }
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  margin-top: 20px;
+  margin-left: 5%;
+  float: left;
+}
 
-.pesq{  
-    margin-top: 25px;
-    width: 50%;
-    margin-left: 25%;  
-  }
+.formulario2 {
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  width: 30%;
+  margin-top: 20px;
+  margin-right: 5%;
+  float: right;
+}
 
-.btt1{
+.clear{
+  margin-right: 19%;
+  text-align: right;
+  clear: both;
+}
+
+.pesq {
+  margin-top: 25px;
+  width: 50%;
+  margin-left: 25%;
+}
+
+.btt1 {
   margin-top: 5px;
   margin-left: 40%;
-  
+
 }
 
-.btt2{
+.btt2 {
   margin-top: 5px;
   margin-left: 5px;
-  
+
 }
 
-.up{
+.up {
   text-transform: uppercase;
+}
+
+input{
+  width: 80%;
 }

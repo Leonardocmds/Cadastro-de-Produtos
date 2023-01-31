@@ -26,4 +26,12 @@ export class EstoqueService {
       map(clientes => clientes)
     );
   }
+
+  atualizar(cadastro: Cadastro):Observable<Cadastro>{
+    return this.http.put<Cadastro>(`${this.API}/${cadastro.id}`, cadastro.quantidade = cadastro.quantidade - (cadastro.qnt || 0))
+    .pipe(
+      tap(cadastro => console.log(cadastro))
+    )
+  }
+
 }
