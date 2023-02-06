@@ -49,5 +49,9 @@
 }
 
 input{
-  width: 80%;
+  width: 60px;
+}
+
+td{
+  font-size: 13px;
 }

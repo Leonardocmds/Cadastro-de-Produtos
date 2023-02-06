@@ -1,0 +1,15 @@
+<table class="table formulario">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Quantidade</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let cadastro of cadastro">
+        <td class="up xd1">{{ cadastro.nome }}</td>
+        <td>{{ cadastro.quantidade }}</td>
+      </tr>
+    </tbody>
+  </table>

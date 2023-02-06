@@ -11,12 +11,16 @@ import { EstoqueComponent } from './estoque/estoque.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FaltaComponent } from './falta/falta.component';
+import { VendaComponent } from './venda/venda.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CadastroComponent,
-    EstoqueComponent
+    EstoqueComponent,
+    FaltaComponent,
+    VendaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,16 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 import { Cadastro } from '../cadastro/cadastro';
-import { EstoqueService } from './estoque.service';
-
+import { VendaService } from './venda.service';
 
 @Component({
-  selector: 'app-estoque',
-  templateUrl: './estoque.component.html',
-  styleUrls: ['./estoque.component.css'],
+  selector: 'app-venda',
+  templateUrl: './venda.component.html',
+  styleUrls: ['./venda.component.css']
 })
-export class EstoqueComponent implements OnInit {
+export class VendaComponent {
   cadastros: Cadastro[] = [];
   cadastro!: Cadastro;
   cadastroSelecionado: Cadastro[] = [];
@@ -20,13 +19,13 @@ export class EstoqueComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private http: HttpClient,
-    private estoqueService: EstoqueService
+    private vendaService:VendaService
   ) { }
 
   ngOnInit(): void { }
 
   listar() {
-    this.estoqueService
+    this.vendaService
       .listNome(this.pesquisar)
       .subscribe((dados) => (this.cadastros = dados));
   }
@@ -58,7 +57,7 @@ export class EstoqueComponent implements OnInit {
     // console.log('Nova quantidade: ' + diminuir)
     // console.log('Id: ' + id);
 
-    this.estoqueService.atualizar(cadastro).subscribe(
+    this.vendaService.atualizar(cadastro).subscribe(
       (dados) => {
 
       })

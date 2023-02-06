@@ -1,0 +1,55 @@
+<form class="center" (ngSubmit)="listar()">
+    <input class="pesq" name="xd" [(ngModel)]="pesquisar" type="text" />
+    <div></div>
+    <button class="btt1 btn btn-primary" type="submit">Pesquisar</button>
+    <button class="btt2 btn btn-primary" type="reset">Limpar</button>
+  </form>
+  
+  
+  
+    <table class="table formulario">
+      <thead>
+        <tr>
+          <th scope="col">Venda</th>
+          <th scope="col">Nome</th>
+          <th scope="col">Preço</th>
+          <th scope="col">Quantidade</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let cadastro of cadastros; let i = index" id="origem">
+          <td>
+            <input [(ngModel)]="cadastro.qnt" id="valorSoma-{{ i }}" type="number" />
+          </td>
+          <td class="up xd1">{{ cadastro.nome }}</td>
+          <td>R$ {{ cadastro.preco }}</td>
+          <td>{{ cadastro.quantidade }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="mover(cadastro, i)">
+              mover
+            </button>
+          </td>
+          <div><button (click)="vender(cadastro,i)" >Vender</button></div>
+        </tr>
+      </tbody>
+    </table>
+  
+    <table class="table formulario2">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Unitário</th>
+          <th scope="col">Total</th>
+        </tr>
+      </thead>
+  
+      <tbody>
+        <tr *ngFor="let cadastro of cadastroSelecionado;" id="origem">
+          <td class="up">{{ cadastro.nome }}</td>
+          <td>R$ {{ cadastro.preco }}</td>
+          <td>R$ {{ cadastro.total }}</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="clear">Preço Final: {{precoFinal}}</div>

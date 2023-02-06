@@ -18,7 +18,16 @@ const routes: Routes = [
   {
     path:'cadastro',
     loadChildren: ()=> import('./cadastro/cadastro.module').then((m)=> m.CadastroModule)
+  },
+  {
+    path:'falta',
+    loadChildren:()=> import('./falta/falta.module').then((m)=> m.FaltaModule)
+  },
+  {
+    path: 'venda',
+    loadChildren:()=> import('./venda/venda.module').then((m)=> m.VendaModule)
   }
+
   
 
 ];
